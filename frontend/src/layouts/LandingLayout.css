@@ -1,0 +1,59 @@
+.landing-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 24px 0;
+  z-index: 100;
+}
+
+.nav-container {
+  padding: 0 40px;
+}
+
+.brand-logo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.text-muted {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  padding: 12px 32px;
+  border-radius: 40px;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #cccccc;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.landing-main {
+  flex-grow: 1;
+}
+
+.landing-footer {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 60px;
+}

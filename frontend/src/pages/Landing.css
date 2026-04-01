@@ -1,0 +1,135 @@
+.landing-page {
+  padding-top: 120px;
+}
+
+.hero-section {
+  min-height: 80vh;
+  position: relative;
+  text-align: center;
+}
+
+.status-badge {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  border: 1px solid white;
+  animation: pulse 2s infinite;
+}
+
+.hero-title {
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: 1;
+  margin-bottom: 32px;
+}
+
+.hero-subtitle {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.btn.lg {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  border-radius: 40px;
+}
+
+.tags {
+  margin-top: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.glass-tag {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  backdrop-filter: blur(5px);
+  transition: var(--transition);
+}
+
+.glass-tag:hover {
+  color: white;
+  border-color: rgba(255,255,255,0.3);
+}
+
+.floating-preview {
+  margin-top: -40px;
+  margin-left: 50%;
+  transform: translateX(10%);
+  max-width: 400px;
+  text-align: left;
+  border-radius: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.preview-icon {
+  background: rgba(26, 115, 232, 0.2);
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.preview-title {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+  margin-top: 100px;
+  padding: 80px 0;
+}
+
+.philosophy-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.philosophy-text strong {
+  color: white;
+}
+
+.icon-wrapper {
+  margin-bottom: 24px;
+}
+
+.highlight-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  padding: 4px 16px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  transform: translateY(-5px);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(26, 115, 232, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(26, 115, 232, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(26, 115, 232, 0); }
+}
+
+.delay-2 {
+  animation-delay: 0.3s;
+}

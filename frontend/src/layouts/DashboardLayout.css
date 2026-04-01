@@ -1,0 +1,141 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.sidebar {
+  width: 260px;
+  background: var(--surface-color);
+  border-right: 1px solid var(--border-color);
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 0 24px 32px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.sidebar-nav {
+  flex-grow: 1;
+  padding: 0 12px;
+  gap: 8px;
+}
+
+.nav-item {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.nav-item:hover, .nav-item.active {
+  color: white;
+  background: var(--surface-hover);
+}
+
+.nav-item.active {
+  background: rgba(26, 115, 232, 0.15);
+  border-left: 3px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.sidebar-footer {
+  padding: 24px 12px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.dashboard-main-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 72px;
+  padding: 0 32px;
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+}
+
+.search-bar {
+  background: var(--surface-color);
+  padding: 8px 16px;
+  border-radius: 24px;
+  width: 300px;
+  border: 1px solid var(--border-color);
+}
+
+.search-bar input {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+.search-bar input::placeholder {
+  color: var(--text-muted);
+}
+
+.icon-btn {
+  position: relative;
+  color: var(--text-muted);
+}
+
+.icon-btn:hover {
+  color: white;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: #ff4757;
+  border-radius: 50%;
+}
+
+.user-profile {
+  cursor: pointer;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.user-role {
+  font-size: 0.75rem;
+}
+
+.dashboard-content {
+  padding: 32px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
