@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../services/supabase';
 import AssignBuzzerModal from '../components/AssignBuzzerModal';
+import SubmissionReviewList from '../components/SubmissionReviewList';
 
 const STATUS_BADGE = {
   pending: { label: 'Pending', bg: 'rgba(234, 179, 8, 0.15)', color: '#eab308', border: 'rgba(234, 179, 8, 0.4)' },
@@ -279,6 +280,22 @@ export default function CampaignDetail() {
           onClose={() => setShowAssignModal(false)}
         />
       )}
+
+      {/* Submission Review */}
+      <div style={{ marginTop: '40px' }}>
+        <h2
+          style={{
+            fontFamily: 'Outfit, sans-serif',
+            fontWeight: 600,
+            fontSize: '1.2rem',
+            color: 'var(--text-main)',
+            marginBottom: '16px',
+          }}
+        >
+          Review Submission
+        </h2>
+        <SubmissionReviewList campaignId={id} />
+      </div>
     </div>
   );
 }

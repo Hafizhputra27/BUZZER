@@ -4,6 +4,8 @@
 -- users: only can read own data, admin can read all
 ALTER TABLE users ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "users_self_read" ON users FOR SELECT USING (auth.uid() = id);
+CREATE POLICY "users_self_insert" ON users FOR INSERT WITH CHECK (auth.uid() = id);
+CREATE POLICY "users_self_update" ON users FOR UPDATE USING (auth.uid() = id);
 CREATE POLICY "admin_read_all_users" ON users FOR SELECT USING (
   EXISTS (SELECT 1 FROM users WHERE id = auth.uid() AND role = 'admin')
 );
